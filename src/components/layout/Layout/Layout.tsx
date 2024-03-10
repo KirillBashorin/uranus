@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import clsx from 'clsx';
-import './globals.css';
+
+import Footer from '@/components/layout/Footer';
+
+import styles from './Layout.module.css';
 
 export const metadata: Metadata = {
   title: 'Uranus',
@@ -12,12 +15,12 @@ export const metadata: Metadata = {
 const coreSansC = localFont({
   src: [
     {
-      path: './fonts/CoreSansC-55Medium.woff2',
+      path: '../../../fonts/CoreSansC-55Medium.woff',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './fonts/CoreSansC-55Medium.woff',
+      path: '../../../fonts/CoreSansC-55Medium.woff',
       weight: '500',
       style: 'normal',
     },
@@ -29,12 +32,12 @@ const coreSansC = localFont({
 const junegull = localFont({
   src: [
     {
-      path: './fonts/junegull.woff2',
+      path: '../../../fonts/junegull.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './fonts/junegull.woff',
+      path: '../../../fonts/junegull.woff',
       weight: '400',
       style: 'normal',
     },
@@ -43,16 +46,24 @@ const junegull = localFont({
   variable: '--junegull',
 });
 
-export default function RootLayout({
+const Layout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
-  const fontVariables = clsx([coreSansC.variable, junegull.variable]);
+}>) => {
+  const fontVariables = clsx([
+    coreSansC.variable,
+    junegull.variable,
+    styles.root,
+  ]);
 
   return (
-    <html lang="en" className={fontVariables}>
-      <body>{children}</body>
-    </html>
+    <div className={fontVariables}>
+      <header>HEADER</header>
+      <main>{children}</main>
+      <Footer />
+    </div>
   );
-}
+};
+
+export default Layout;

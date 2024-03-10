@@ -10,11 +10,7 @@ html {
 }
 
 body {
-  display: grid;
-  min-height: 100vh;
-  grid-template-rows: min-content 1fr min-content;
   background-color: var(--secondary);
   font-family: var(--core-sans-c);
   color: var(--black);
-  overflow-x: hidden;
 }
