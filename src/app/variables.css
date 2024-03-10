@@ -1,0 +1,29 @@
+:root {
+  --primary: #ffcb3d;
+  --secondary: #22123e;
+  --white: #fff;
+  --black: #000;
+  --indent-horizontal: 15px;
+  --indent-vertical: 60px;
+}
+
+@media screen and (min-width: 720px) {
+  :root {
+    --indent-horizontal: 30px;
+    --indent-vertical: 80px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --indent-horizontal: 120px;
+    --indent-vertical: 100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    --indent-horizontal: 240px;
+    --indent-vertical: 100px;
+  }
+}

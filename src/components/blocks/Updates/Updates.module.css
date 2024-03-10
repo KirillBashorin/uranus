@@ -1,0 +1,23 @@
+.updates {
+  background-color: var(--primary);
+}
+
+.inner {
+  padding: var(--indent-vertical) 0;
+}
+
+.title {
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 720px) {
+    margin-bottom: 34px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 42px;
+  }
+}
+
+.text:not(:last-of-type) {
+  margin-bottom: 16px;
+}
