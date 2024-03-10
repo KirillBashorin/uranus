@@ -1,0 +1,51 @@
+.footer {
+  background-color: var(--secondary);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--indent-vertical) 0;
+}
+
+.title {
+  color: var(--white);
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 720px) {
+    margin-bottom: 34px;
+  }
+}
+
+.email {
+  color: var(--white);
+  font-size: 15px;
+  line-height: 130%;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  margin-bottom: 18px;
+
+  @media screen and (min-width: 720px) {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+}
+
+.email:active {
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+@media (hover: hover) {
+  .email:hover,
+  .email:focus {
+    color: var(--primary);
+  }
+}

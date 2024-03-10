@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import clsx from 'clsx';
 
+import Footer from '@/components/layout/Footer';
+
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -56,7 +58,7 @@ export default function RootLayout({
       <body>
         <header>HEADER</header>
         <main>{children}</main>
-        <footer>FOOTER</footer>
+        <Footer />
       </body>
     </html>
   );
