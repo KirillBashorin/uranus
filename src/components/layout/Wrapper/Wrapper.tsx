@@ -7,7 +7,7 @@ interface IWrapperProps {
 }
 
 const Wrapper: FC<IWrapperProps> = ({ children }) => {
-  return <div className={styles.wrapper}>{children}</div>;
+  return <div className={styles.root}>{children}</div>;
 };
 
 export default Wrapper;

@@ -38,7 +38,7 @@ interface ISocialsProps {
 }
 
 const Socials: FC<ISocialsProps> = ({ items, className }) => {
-  const socialsClassNames = clsx(className, styles.socials);
+  const socialsClassNames = clsx(className, styles.root);
   return (
     <ul className={socialsClassNames}>
       {items &&

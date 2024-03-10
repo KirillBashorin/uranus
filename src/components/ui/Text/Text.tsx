@@ -9,7 +9,7 @@ interface ITextProps {
 }
 
 const Text: FC<ITextProps> = ({ children, className }) => {
-  const textClassNames = clsx(className, styles.text);
+  const textClassNames = clsx(className, styles.root);
 
   return <p className={textClassNames}>{children}</p>;
 };

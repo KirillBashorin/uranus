@@ -31,7 +31,7 @@ const socialItems = [
 
 const Footer: FC = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.root}>
       <Wrapper>
         <div className={styles.inner}>
           <Title className={styles.title}>Contacts</Title>

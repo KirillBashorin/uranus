@@ -8,7 +8,7 @@ import styles from './Updates.module.css';
 
 const Updates: FC = () => {
   return (
-    <section className={styles.updates}>
+    <section className={styles.root}>
       <Wrapper>
         <div className={styles.inner}>
           <Title className={styles.title}>Updates</Title>
