@@ -20,6 +20,7 @@
 
 .email {
   color: var(--white);
+  font-family: var(--core-sans-c);
   font-size: 15px;
   line-height: 130%;
   font-weight: 500;

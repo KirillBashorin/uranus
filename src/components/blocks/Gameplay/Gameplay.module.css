@@ -1,0 +1,143 @@
+.root {
+  background-color: var(--primary);
+  overflow: hidden;
+}
+
+.inner {
+  padding: var(--indent-vertical) 0;
+
+  @media screen and (min-width: 1024px) {
+    overflow: hidden;
+  }
+}
+
+.title {
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 720px) {
+    margin-bottom: 34px;
+  }
+}
+
+.text:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
+.text:last-of-type {
+  margin-bottom: 82px;
+
+  @media screen and (min-width: 720px) {
+    margin-bottom: 122px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 103px;
+  }
+}
+
+.sliderContainer {
+  position: relative;
+}
+
+.slider {
+  overflow: visible;
+  margin: 0 -45px;
+
+  @media screen and (min-width: 720px) {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin: 0 65px;
+  }
+}
+
+.item {
+  display: flex;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.slide {
+  transition: all 0.5s ease-in-out;
+
+  @media screen and (min-width: 1024px) {
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+.slideActive {
+  transform: scale(1.7) !important;
+
+  @media screen and (min-width: 1024px) {
+    transform: scale(1.2) !important;
+  }
+}
+
+.pagination {
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 96px;
+
+  @media screen and (min-width: 720px) {
+    margin-top: 140px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    justify-content: space-between;
+    z-index: 1;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
+}
+
+.nextButton,
+.prevButton {
+  cursor: pointer;
+  pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  padding: 0;
+  background: transparent;
+  border: 2px solid var(--black);
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nextButton:active,
+.prevButton:active {
+  color: var(--primary);
+  background-color: var(--black);
+}
+
+@media (hover: hover) {
+  .nextButton:hover,
+  .prevButton:hover {
+    color: var(--primary);
+    background-color: var(--black);
+  }
+}
+
+.nextButton {
+  .icon {
+    transform: rotate(180deg);
+  }
+}
+
+.icon {
+  width: 13px;
+  height: 22px;
+}
