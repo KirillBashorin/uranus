@@ -1,0 +1,151 @@
+.root {
+  background-color: var(--secondary);
+  overflow: hidden;
+}
+
+.inner {
+  padding: var(--indent-vertical) 0;
+
+  @media screen and (min-width: 720px) {
+    position: relative;
+  }
+}
+
+.title {
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 130%;
+  text-align: center;
+  margin: 0 0 40px;
+
+  @media screen and (min-width: 720px) {
+    font-size: 20px;
+    margin-bottom: 65px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 22px;
+    margin-bottom: 75px;
+  }
+}
+
+.subtitle br {
+  @media screen and (min-width: 720px) {
+    display: none;
+  }
+}
+
+.mage {
+  pointer-events: none;
+  width: 267px;
+  height: 280px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  @media screen and (min-width: 720px) {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    right: -121px;
+    display: flex;
+    height: auto;
+    width: 471px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    right: -51px;
+  }
+}
+
+.mageImage {
+  width: 100%;
+  height: auto;
+}
+
+.accordion {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media screen and (min-width: 720px) {
+    width: 536px;
+    gap: 18px;
+  }
+}
+
+.accordionItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionItem.opened {
+  gap: 14px;
+
+  .accordionButton {
+    background-color: var(--primary);
+    color: var(--black);
+  }
+
+  @media screen and (min-width: 720px) {
+    gap: 18px;
+  }
+}
+
+.accordionButton {
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  border: 3px solid var(--primary);
+  border-radius: 10px 10px 10px 0;
+  background-color: transparent;
+  padding: 18px 28px 11px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  @media screen and (min-width: 720px) {
+    font-size: 18px;
+    width: fit-content;
+  }
+}
+
+@media (hover: hover) {
+  .accordionButton:hover,
+  .accordionButton:focus {
+    cursor: pointer;
+    background-color: var(--primary);
+    color: var(--black);
+  }
+}
+
+.accordionContentWrapper {
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.accordionContent {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  background-color: var(--white);
+  padding: 18px 30px;
+  border-radius: 10px 0 10px 10px;
+  text-align: justify;
+
+  @media screen and (min-width: 720px) {
+    font-size: 18px;
+  }
+}

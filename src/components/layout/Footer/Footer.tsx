@@ -9,23 +9,23 @@ import styles from './Footer.module.css';
 const socialItems = [
   {
     icon: SocialIcons.FACEBOOK,
-    link: '#',
+    link: '#fb',
   },
   {
     icon: SocialIcons.GITHUB,
-    link: '#',
+    link: '#github',
   },
   {
     icon: SocialIcons.MEDIUM,
-    link: '#',
+    link: '#medium',
   },
   {
     icon: SocialIcons.DISCORD,
-    link: '#',
+    link: '#discord',
   },
   {
     icon: SocialIcons.TWITTER,
-    link: '#',
+    link: '#twitter',
   },
 ];
 

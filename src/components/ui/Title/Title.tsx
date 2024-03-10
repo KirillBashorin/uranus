@@ -10,7 +10,7 @@ interface ITitleProps {
 }
 
 const Title: FC<ITitleProps> = ({ children, className, as: Tag = 'h1' }) => {
-  const titleClassNames = clsx([className, styles.title]);
+  const titleClassNames = clsx(className, styles.title);
 
   return <Tag className={titleClassNames}>{children}</Tag>;
 };
