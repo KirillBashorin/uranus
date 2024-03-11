@@ -43,7 +43,11 @@ const gameplayItems = [
   },
 ];
 
-const Gameplay: FC = () => {
+interface IGameplayProps {
+  id?: string;
+}
+
+const Gameplay: FC<IGameplayProps> = ({ id }) => {
   const breakpoints = {
     720: {
       spaceBetween: 81,
@@ -68,7 +72,7 @@ const Gameplay: FC = () => {
   };
 
   return (
-    <section className={styles.root}>
+    <section className={styles.root} id={id}>
       <Wrapper>
         <div className={styles.inner}>
           <Title className={styles.title}>Gameplay</Title>

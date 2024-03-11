@@ -27,7 +27,11 @@ const accordionItems = [
   },
 ];
 
-const Narrative: FC = () => {
+interface INarrativeProps {
+  id?: string;
+}
+
+const Narrative: FC<INarrativeProps> = ({ id }) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const activeItem = useRef<HTMLDivElement | null>(null);
   const accordion = useRef<HTMLUListElement | null>(null);
@@ -42,7 +46,7 @@ const Narrative: FC = () => {
   }, [activeItemIndex]);
 
   return (
-    <section className={styles.root}>
+    <section className={styles.root} id={id}>
       <Wrapper>
         <div className={styles.inner}>
           <Title className={styles.title}>Narrative</Title>

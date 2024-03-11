@@ -29,9 +29,13 @@ const socialItems = [
   },
 ];
 
-const Footer: FC = () => {
+interface IFooterProps {
+  id?: string;
+}
+
+const Footer: FC<IFooterProps> = ({ id }) => {
   return (
-    <footer className={styles.root}>
+    <footer className={styles.root} id={id}>
       <Wrapper>
         <div className={styles.inner}>
           <Title className={styles.title}>Contacts</Title>

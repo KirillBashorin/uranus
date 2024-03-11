@@ -6,9 +6,13 @@ import Text from '@/components/ui/Text';
 
 import styles from './Updates.module.css';
 
-const Updates: FC = () => {
+interface IUpdatesProps {
+  id?: string;
+}
+
+const Updates: FC<IUpdatesProps> = ({ id }) => {
   return (
-    <section className={styles.root}>
+    <section className={styles.root} id={id}>
       <Wrapper>
         <div className={styles.inner}>
           <Title className={styles.title}>Updates</Title>

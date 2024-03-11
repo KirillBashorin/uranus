@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
-import clsx from 'clsx';
 
+import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import Badge from '@/components/layout/Badge';
 
 import styles from './Layout.module.css';
 
@@ -18,9 +19,10 @@ const Layout = ({
 }>) => {
   return (
     <div className={styles.root}>
-      <header>HEADER</header>
+      <Header />
       <main>{children}</main>
-      <Footer />
+      <Footer id="contacts" />
+      <Badge />
     </div>
   );
 };

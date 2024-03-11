@@ -1,0 +1,43 @@
+.root {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: var(--primary);
+  border-radius: 10px 0 0 10px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 37px 10px;
+  transition: padding 0.3s ease-in-out;
+
+  @media screen and (min-width: 720px) {
+    padding: 54px 13px;
+  }
+}
+
+.link:active {
+  opacity: 0.8;
+}
+
+.icon {
+  color: var(--black);
+  width: 24px;
+  transition: color 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+  .link:hover,
+  .link:focus {
+    padding-right: 23px;
+  }
+
+  .link:hover .icon,
+  .link:focus .icon {
+    color: var(--secondary);
+  }
+}

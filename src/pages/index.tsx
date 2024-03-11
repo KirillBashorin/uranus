@@ -6,9 +6,9 @@ import Gameplay from '@/components/blocks/Gameplay';
 const Home: FC = () => {
   return (
     <>
-      <Gameplay />
-      <Narrative />
-      <Updates />
+      <Gameplay id="gameplay" />
+      <Narrative id="narrative" />
+      <Updates id="updates" />
     </>
   );
 };
