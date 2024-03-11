@@ -5,6 +5,8 @@
   --black: #000;
   --indent-horizontal: 15px;
   --indent-vertical: 60px;
+  --core-sans-c: 'Core Sans C', Arial, sans-serif;
+  --junegull: 'Junegull', Arial, sans-serif;
 }
 
 @media screen and (min-width: 720px) {

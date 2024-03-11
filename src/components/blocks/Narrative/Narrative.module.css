@@ -92,14 +92,14 @@
 .accordionItem.opened {
   gap: 14px;
 
-  .accordionButton {
-    background-color: var(--primary);
-    color: var(--black);
-  }
-
   @media screen and (min-width: 720px) {
     gap: 18px;
   }
+}
+
+.accordionItem.opened .accordionButton {
+  background-color: var(--primary);
+  color: var(--black);
 }
 
 .accordionButton {

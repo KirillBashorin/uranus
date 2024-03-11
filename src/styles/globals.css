@@ -3,6 +3,7 @@
 html,
 body {
   margin: 0;
+  font-family: var(--core-sans-c);
 }
 
 html {
@@ -11,7 +12,6 @@ html {
 
 body {
   background-color: var(--secondary);
-  font-family: var(--core-sans-c);
   color: var(--black);
 }
 
