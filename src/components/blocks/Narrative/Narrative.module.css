@@ -103,6 +103,7 @@
 }
 
 .accordionButton {
+  font-family: var(--core-sans-c);
   color: var(--primary);
   font-weight: 500;
   font-size: 16px;
@@ -136,7 +137,9 @@
 }
 
 .accordionContent {
+  white-space: pre-wrap;
   color: var(--black);
+  font-family: var(--core-sans-c);
   font-weight: 500;
   font-size: 14px;
   line-height: 150%;

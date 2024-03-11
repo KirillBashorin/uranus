@@ -11,42 +11,19 @@ import styles from './Narrative.module.css';
 const accordionItems = [
   {
     title: 'What is URANUS?',
-    text: `The origins of URANUS are shrouded in mystery, with no
-    definitive answer. Legends whisper of a powerful mage who
-    ventured into the Cosmos Coliseum, becoming the first to
-    establish its foundations. This mage supposedly clashed with a
-    hero from another realm, etching their names in history. The
-    path to this cosmic arena is said to lie through a wormhole
-    concealed within the core of planet Uranus in our solar
-    system. Perhaps this is why the mage chose such a name - a
-    testament to the pivotal role the planet played in their
-    journey.`,
-  },
-  {
-    title: 'Who are the mage-gladiators?',
-    text: `The origins of URANUS are shrouded in mystery, with no
-    definitive answer. Legends whisper of a powerful mage who
-    ventured into the Cosmos Coliseum, becoming the first to
-    establish its foundations. This mage supposedly clashed with a
-    hero from another realm.`,
+    text: "URANUS is more than just a place, it's a multilayered realm where the great Colosseum is. Beneath a shimmering celestial canopy lies an arena where a grand battle unfolds for the coveted Ether Crystals",
   },
   {
     title: 'What role do I play in this story?',
-    text: `The origins of URANUS are shrouded in mystery, with no
-    definitive answer. Legends whisper of a powerful mage who
-    ventured into the Cosmos Coliseum, becoming the first to
-    establish its foundations. This mage supposedly clashed with a
-    hero from another realm, etching their names in history. The
-    path to this cosmic arena is said to lie through a wormhole
-    concealed within the core of planet Uranus in our solar
-    system..`,
+    text: "You are an owner of a magic school, training gladiators for the Cosmic Colosseum. You are a strategist, making calculated decisions in battle. And you are a gambler, placing high-stakes bets on your students' victories. You are the one who will conquer URANUS",
+  },
+  {
+    title: 'Who are wizardiators?',
+    text: 'Wizards-gladiators are skilled warriors from different realms, seeking for glory in the arena of the Colosseum. They hone their abilities in prestigious schools, mastering ancient spells and perfecting their combat prowess. In URANUS, they step into the arena to fight for glory, wealth, and of course, possession of the priceless Ether Crystals',
   },
   {
     title: 'Why URANUS?',
-    text: `The origins of URANUS are shrouded in mystery, with no
-    definitive answer. Legends whisper of a powerful mage who
-    ventured into the Cosmos Coliseum, becoming the first to
-    establish its foundations.`,
+    text: 'Ah, the enigma of URANUS. Its origins are shrouded, lost to the swirling sands of time. Some whisper of a legendary mage, the first to breach the veil and lay the foundation of the Cosmic Colosseum.\n\nPerhaps the mage sought to honor the pivotal role the planet Uranus played in his journey. For it was within the core of Uranus in the solar system that the wormhole lay concealed, a first gateway to this cosmic arena',
   },
 ];
 
