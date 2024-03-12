@@ -15,7 +15,9 @@ const Updates: FC<IUpdatesProps> = ({ id }) => {
     <section className={styles.root} id={id}>
       <Wrapper>
         <div className={styles.inner}>
-          <Title className={styles.title}>Updates</Title>
+          <Title className={styles.title} as={'h2'}>
+            Updates
+          </Title>
           <Text className={styles.text}>
             Our developers are hard at work crafting the gameplay and graphics
             for URANUS. We&apos;re excited to share that we&apos;re making great

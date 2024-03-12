@@ -75,7 +75,9 @@ const Gameplay: FC<IGameplayProps> = ({ id }) => {
     <section className={styles.root} id={id}>
       <Wrapper>
         <div className={styles.inner}>
-          <Title className={styles.title}>Gameplay</Title>
+          <Title className={styles.title} as={'h2'}>
+            Gameplay
+          </Title>
           <Text className={styles.text}>
             Gear up your NFT-wizardiator with spells from a pool of 80+ scrolls
             across 8 magic schools. Mix&apos;em up for synergy, pick your

@@ -72,7 +72,9 @@ const Narrative: FC<INarrativeProps> = ({ id }) => {
     <section className={styles.root} id={id}>
       <Wrapper>
         <div className={styles.inner}>
-          <Title className={styles.title}>Narrative</Title>
+          <Title className={styles.title} as={'h2'}>
+            Narrative
+          </Title>
           <p className={styles.subtitle}>
             Magus Answers Your
             <br /> Questions about URANUS

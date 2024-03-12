@@ -40,7 +40,9 @@ const Footer: FC<IFooterProps> = ({ id }) => {
     <footer className={styles.root} id={id}>
       <Wrapper>
         <div className={styles.inner}>
-          <Title className={styles.title}>Contacts</Title>
+          <Title className={styles.title} as={'h2'}>
+            Contacts
+          </Title>
           <a className={styles.email} href={`mailto:${Config.email}`}>
             {Config.email}
           </a>

@@ -194,11 +194,11 @@ const Hero: FC = () => {
               src="/asteroid5.png"
               alt="asteroid"
             />
-            <p className={styles.description}>
+            <h1 className={styles.description}>
               {
                 'Blockchain game for cryptocurrency stakes \nStrategic PvP gameplay and full transparency'
               }
-            </p>
+            </h1>
           </div>
           <HowItWorks isAlreadyWrapped={true} />
         </div>
