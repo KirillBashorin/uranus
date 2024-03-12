@@ -7,6 +7,7 @@ import Wrapper from '@/components/layout/Wrapper';
 import Title from '@/components/ui/Title';
 
 import styles from './Narrative.module.css';
+import { difference } from 'next/dist/build/utils';
 
 const accordionItems = [
   {
@@ -38,12 +39,34 @@ const Narrative: FC<INarrativeProps> = ({ id }) => {
   const [activeItemHeight, setActiveItemHeight] = useState('0px');
 
   useEffect(() => {
-    const height = activeItem.current?.offsetHeight;
-
+    const currentItemHeight = activeItem.current?.offsetHeight;
     if (activeItem.current) {
-      setActiveItemHeight(height + 'px');
+      setActiveItemHeight(currentItemHeight + 'px');
     }
   }, [activeItemIndex]);
+
+  const mageRef = useRef<HTMLDivElement | null>(null);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    // setting timeout because dialog height have a transition duration 300ms;
+    setTimeout(() => {
+      const mage = mageRef.current;
+      const dialogHeight = dialogRef.current?.offsetHeight;
+      const mageHeight = mage?.offsetHeight;
+
+      if (!(mageHeight && dialogHeight && mage)) {
+        return;
+      }
+
+      if (mageHeight >= dialogHeight) {
+        const difference = dialogHeight - mageHeight;
+        mage.style.bottom = `${difference}px`;
+      } else {
+        mage.style.bottom = '0';
+      }
+    }, 310);
+  }, [activeItemHeight]);
 
   return (
     <section className={styles.root} id={id}>
@@ -54,48 +77,54 @@ const Narrative: FC<INarrativeProps> = ({ id }) => {
             Magus Answers Your
             <br /> Questions about URANUS
           </p>
-          <div className={styles.mage}>
-            <Image
-              className={styles.mageImage}
-              src={'mage.png'}
-              width="267"
-              height="280"
-              alt="Magnus"
-            />
-          </div>
-          <ul className={styles.accordion} ref={accordion}>
-            {accordionItems &&
-              accordionItems.length &&
-              accordionItems.map((item, index) => (
-                <li
-                  className={clsx(
-                    styles.accordionItem,
-                    index === activeItemIndex && styles.opened
-                  )}
-                  key={item.title}
-                >
-                  <button
-                    className={styles.accordionButton}
-                    type="button"
-                    onClick={() => setActiveItemIndex(index)}
-                  >
-                    {item.title}
-                  </button>
-                  <div
-                    className={styles.accordionContentWrapper}
-                    style={{
-                      height: activeItemIndex === index ? activeItemHeight : 0,
-                    }}
-                  >
-                    {activeItemIndex === index && (
-                      <div className={styles.accordionContent} ref={activeItem}>
-                        <div>{item.text}</div>
-                      </div>
+          <div className={styles.dialog} ref={dialogRef}>
+            <div className={styles.mage} ref={mageRef}>
+              <Image
+                className={styles.mageImage}
+                src={'mage.png'}
+                width="267"
+                height="280"
+                alt="Magnus"
+              />
+            </div>
+            <ul className={styles.accordion} ref={accordion}>
+              {accordionItems &&
+                accordionItems.length &&
+                accordionItems.map((item, index) => (
+                  <li
+                    className={clsx(
+                      styles.accordionItem,
+                      index === activeItemIndex && styles.opened
                     )}
-                  </div>
-                </li>
-              ))}
-          </ul>
+                    key={item.title}
+                  >
+                    <button
+                      className={styles.accordionButton}
+                      type="button"
+                      onClick={() => setActiveItemIndex(index)}
+                    >
+                      {item.title}
+                    </button>
+                    <div
+                      className={styles.accordionContentWrapper}
+                      style={{
+                        height:
+                          activeItemIndex === index ? activeItemHeight : 0,
+                      }}
+                    >
+                      {activeItemIndex === index && (
+                        <div
+                          className={styles.accordionContent}
+                          ref={activeItem}
+                        >
+                          <div>{item.text}</div>
+                        </div>
+                      )}
+                    </div>
+                  </li>
+                ))}
+            </ul>
+          </div>
         </div>
       </Wrapper>
     </section>

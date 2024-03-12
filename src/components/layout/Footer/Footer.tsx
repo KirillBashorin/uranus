@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 
+import Config from '../../../../config.json';
+
 import Wrapper from '@/components/layout/Wrapper';
 import Title from '@/components/ui/Title';
 import Socials, { SocialIcons } from '@/components/ui/Socials';
@@ -39,8 +41,8 @@ const Footer: FC<IFooterProps> = ({ id }) => {
       <Wrapper>
         <div className={styles.inner}>
           <Title className={styles.title}>Contacts</Title>
-          <a className={styles.email} href="mailto:unfo@uranus.com">
-            unfo@uranus.com
+          <a className={styles.email} href={`mailto:${Config.email}`}>
+            {Config.email}
           </a>
           <Socials items={socialItems} />
         </div>

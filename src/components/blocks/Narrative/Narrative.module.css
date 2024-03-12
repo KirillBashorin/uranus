@@ -4,7 +4,7 @@
 }
 
 .inner {
-  padding: var(--indent-vertical) 0;
+  padding: var(--indent-vertical) 0 0;
 
   @media screen and (min-width: 720px) {
     position: relative;
@@ -17,21 +17,21 @@
 }
 
 .subtitle {
+  position: relative;
+  z-index: 1;
   color: var(--white);
   font-weight: 500;
   font-size: 15px;
   line-height: 130%;
   text-align: center;
-  margin: 0 0 40px;
+  margin: 0;
 
   @media screen and (min-width: 720px) {
     font-size: 20px;
-    margin-bottom: 65px;
   }
 
   @media screen and (min-width: 1024px) {
     font-size: 22px;
-    margin-bottom: 75px;
   }
 }
 
@@ -41,12 +41,26 @@
   }
 }
 
+.dialog {
+  position: relative;
+  padding: 40px 0 var(--indent-vertical);
+
+  @media screen and (min-width: 720px) {
+    padding: 65px 0 var(--indent-vertical);
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 75px 0 var(--indent-vertical);
+  }
+}
+
 .mage {
   pointer-events: none;
   width: 267px;
   height: 280px;
   overflow: hidden;
   margin: 0 auto;
+  transition: bottom 0.3s ease-in-out;
 
   @media screen and (min-width: 720px) {
     z-index: 0;
