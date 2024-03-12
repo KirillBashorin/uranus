@@ -1,0 +1,17 @@
+.inner {
+  padding: var(--indent-vertical) 0 0;
+}
+
+.title {
+  color: var(--white);
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 720px) {
+    margin-bottom: 34px;
+  }
+}
+
+.text {
+  color: var(--white);
+  text-align: justify;
+}

@@ -1,0 +1,585 @@
+.root {
+  position: relative;
+  background-image: url('/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  /* max-width: 100vw; */
+}
+
+.inner {
+  /* padding: 90px 0 246px; */
+  padding-top: 90px;
+
+  /* @media screen and (min-width: 720px) {
+    padding-top: 134px;
+    padding: 134px 0 415px;
+  } */
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 134px;
+    /* padding: 134px 0 507px; */
+  }
+}
+
+.badge {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 0 auto 20px;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.cloudLT {
+  position: absolute;
+  top: 302px;
+  left: 0;
+  width: 143px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 331px;
+    width: 248px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 360px;
+    width: 500px;
+  }
+}
+
+.cloudLM1 {
+  position: absolute;
+  top: 368px;
+  left: 11px;
+  width: 176px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 445px;
+    left: 18px;
+    width: 307px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 591px;
+    left: 32px;
+    width: 618px;
+  }
+}
+
+.cloudLM2 {
+  position: absolute;
+  top: 461px;
+  left: 0;
+  width: 248px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 606px;
+    width: 432px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 915px;
+    width: 870px;
+  }
+}
+
+.cloudLB {
+  position: absolute;
+  top: 971px;
+  left: 0;
+  width: 84px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 1392px;
+    width: 142px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 1664px;
+    width: 292px;
+  }
+}
+
+.cloudRT {
+  position: absolute;
+  top: 332px;
+  right: 20px;
+  width: 130px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 383px;
+    right: 34px;
+    width: 227px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 465px;
+    right: 64px;
+    width: 457px;
+  }
+}
+
+.cloudRM {
+  position: absolute;
+  top: 361px;
+  right: 0;
+  width: 163px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 434px;
+    width: 283px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 567px;
+    width: 570px;
+  }
+}
+
+.cloudRB {
+  z-index: 0;
+  position: absolute;
+  top: 970px;
+  right: 0;
+  width: 252px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 1328px;
+    width: 424px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 1672px;
+    width: 808px;
+  }
+}
+
+.sparkles {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 60px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 0;
+  }
+}
+
+.uranus {
+  display: block;
+  width: 276px;
+  height: auto;
+  margin: 0 auto 16px;
+
+  @media screen and (min-width: 720px) {
+    margin-bottom: 27px;
+    width: 400px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 717px;
+  }
+}
+
+.planet1 {
+  position: absolute;
+  top: 196px;
+  right: -105px;
+  width: 240px;
+  height: auto;
+  transform: rotate(-2.5deg);
+
+  @media screen and (min-width: 1024px) {
+    width: 469px;
+    right: -180px;
+    top: 110px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 18px;
+    right: -50px;
+  }
+}
+
+.planet2 {
+  position: absolute;
+  top: 12px;
+  left: -120px;
+  width: 250px;
+  height: 250px;
+
+  @media screen and (min-width: 720px) {
+    top: 84px;
+    left: -110px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    left: -41px;
+    top: 60px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 98px;
+    left: 74px;
+  }
+}
+
+.uranusLightnings,
+.uranusLightnings2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.uranusLightnings {
+  top: 111px;
+
+  @media screen and (min-width: 720px) {
+    top: 100px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 0;
+  }
+}
+
+.uranusLightnings2 {
+  top: 370px;
+
+  @media screen and (min-width: 720px) {
+    top: 370px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 470px;
+  }
+}
+
+.dust {
+  position: absolute;
+  top: 298px;
+  left: 0;
+  right: 0;
+  width: 382px;
+  margin: 0 auto;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 370px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 350px;
+  }
+}
+
+.planet3 {
+  position: absolute;
+  top: 332px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 375px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 400px;
+    width: 658px;
+    height: auto;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 439px;
+    width: 1054px;
+  }
+}
+
+.coliseum {
+  position: absolute;
+  top: 340px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 367px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 357px;
+    width: 707px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 423px;
+    width: 1111px;
+  }
+}
+
+.planet4 {
+  position: absolute;
+  top: 569px;
+  right: -16px;
+  width: 118px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 843px;
+    right: -57px;
+    width: 175px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 1080px;
+    right: -53px;
+    width: 407px;
+  }
+}
+
+.planet5 {
+  position: absolute;
+  top: 560px;
+  left: -77px;
+  width: 172px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 797px;
+    left: -151px;
+    width: 297px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 879px;
+    left: -330px;
+    width: 659px;
+  }
+}
+
+.asteroid1 {
+  position: absolute;
+  top: 332px;
+  left: 31px;
+  width: 58px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 351px;
+    left: 33px;
+    width: 110px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 451px;
+    width: 173px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 462px;
+    left: 143px;
+    width: 173px;
+  }
+}
+
+.asteroid2 {
+  position: absolute;
+  top: 365px;
+  left: 98px;
+  width: 37px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 413px;
+    left: 161px;
+    width: 71px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 513px;
+    left: 231px;
+    width: 112px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 523px;
+    left: 391px;
+  }
+}
+
+.asteroid3 {
+  position: absolute;
+  top: 521px;
+  left: 39px;
+  width: 50px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 710px;
+    left: 38px;
+    width: 95px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 945px;
+    left: 97px;
+    width: 197px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 792px;
+  }
+}
+
+.asteroid4 {
+  position: absolute;
+  top: 368px;
+  right: 21px;
+  width: 66px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 419px;
+    right: 17px;
+    width: 124px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 451px;
+    right: 10px;
+    width: 196px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 551px;
+    right: 146px;
+  }
+}
+
+.asteroid5 {
+  position: absolute;
+  top: 360px;
+  right: 118px;
+  width: 19px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 393px;
+    right: 192px;
+    width: 36px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 393px;
+    right: 262px;
+    width: 56px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 494px;
+    right: 464px;
+  }
+}
+
+.asteroid6 {
+  position: absolute;
+  top: 568px;
+  right: 71px;
+  width: 66px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 799px;
+    right: 93px;
+    width: 125px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 1030px;
+    width: 198px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 812px;
+    right: 0;
+    width: 198px;
+  }
+}
+
+.asteroid7 {
+  position: absolute;
+  top: 524px;
+  right: 44px;
+  width: 33px;
+  height: auto;
+
+  @media screen and (min-width: 720px) {
+    top: 715px;
+    right: 60px;
+    width: 62px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: 925px;
+    width: 97px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    right: 240px;
+  }
+}
+
+.description {
+  font-family: var(--core-sans-c);
+  color: var(--white);
+  font-size: 14px;
+  line-height: 130%;
+  margin: 0;
+  text-align: center;
+  max-width: 266px;
+  margin: 0 auto;
+  padding-bottom: calc(462px - var(--indent-vertical));
+
+  @media screen and (min-width: 720px) {
+    white-space: pre-wrap;
+    font-size: 18px;
+    max-width: 500px;
+    padding-bottom: calc(740px - var(--indent-vertical));
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-bottom: calc(1070px - var(--indent-vertical));
+  }
+}
+
+.arenaWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.arena {
+  z-index: 1;
+  min-width: 690px;
+  width: 100%;
+  height: auto;
+}
