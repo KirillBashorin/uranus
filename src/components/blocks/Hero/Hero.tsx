@@ -107,7 +107,7 @@ const Hero: FC = () => {
               className={styles.coliseum}
               width="350"
               height="260"
-              src="/coliseum.png"
+              src="/coliseum-asteroid.png"
               alt="coliseum"
             />
             <Image
