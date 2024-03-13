@@ -2,6 +2,7 @@
 import React, { FC, useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
 import clsx from 'clsx';
 
 import Wrapper from '@/components/layout/Wrapper';
@@ -39,6 +40,7 @@ const Narrative: FC<INarrativeProps> = ({ id }) => {
   const activeItem = useRef<HTMLDivElement | null>(null);
   const accordion = useRef<HTMLUListElement | null>(null);
   const [activeItemHeight, setActiveItemHeight] = useState('0px');
+  const isInView = useInView(accordion);
 
   useEffect(() => {
     const currentItemHeight = activeItem.current?.offsetHeight;
@@ -56,8 +58,8 @@ const Narrative: FC<INarrativeProps> = ({ id }) => {
       const mage = mageRef.current;
       const dialogHeight = dialogRef.current?.offsetHeight;
       const mageHeight = mage?.offsetHeight;
-
-      if (!(mageHeight && dialogHeight && mage)) {
+      console.log('isInView', isInView);
+      if (!(mageHeight && dialogHeight && mage && isInView)) {
         return;
       }
 
@@ -67,8 +69,8 @@ const Narrative: FC<INarrativeProps> = ({ id }) => {
       } else {
         mage.style.bottom = '0';
       }
-    }, 310);
-  }, [activeItemHeight]);
+    }, 350);
+  }, [activeItemHeight, isInView]);
 
   return (
     <section className={styles.root} id={id}>
