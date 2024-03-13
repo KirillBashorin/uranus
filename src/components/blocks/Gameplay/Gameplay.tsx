@@ -2,15 +2,21 @@ import React, { FC, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Swiper as SwiperType } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { motion } from 'framer-motion';
 import clsx from 'clsx';
 import 'swiper/css';
 
 import Arrow from '/public/icons/arrow.svg';
-import DTThunder from '/public/dt-thunder.png';
-import Twirl from '/public/twirl.png';
-import Vendetta from '/public/vendetta.png';
+import CoolAid from '/public/cool-aid.png';
+import DTThunder from '/public/doubletrouble-rhunder.png';
+import Gigablow from '/public/gigablow.png';
+import PoisonBreak from '/public/poison-break.png';
+import Twirl from '/public/thunderstruck-twirl.png';
+import VolcanicVendetta from '/public/volcanic-vendetta.png';
 
 import Wrapper from '@/components/layout/Wrapper';
+import ZoomIn from '@/components/animations/ZoomIn';
+import SlideIn from '@/components/animations/SlidIn';
 import Title from '@/components/ui/Title';
 import Text from '@/components/ui/Text';
 
@@ -18,28 +24,28 @@ import styles from './Gameplay.module.css';
 
 const gameplayItems = [
   {
-    name: 'Double trouble thunder',
+    name: 'Cool aid',
+    image: CoolAid,
+  },
+  {
+    name: 'Doubletrouble thunder',
     image: DTThunder,
+  },
+  {
+    name: 'Gigablow',
+    image: Gigablow,
+  },
+  {
+    name: 'Poison break',
+    image: PoisonBreak,
   },
   {
     name: 'Thunderstruck twirl',
-    image: Vendetta,
-  },
-  {
-    name: 'Volcanic vendetta',
     image: Twirl,
   },
   {
-    name: 'Double trouble thunder 2',
-    image: DTThunder,
-  },
-  {
-    name: 'Thunderstruck twirl 2',
-    image: Vendetta,
-  },
-  {
-    name: 'Volcanic vendetta 2',
-    image: Twirl,
+    name: 'VolcanicVendetta',
+    image: VolcanicVendetta,
   },
 ];
 
@@ -75,19 +81,24 @@ const Gameplay: FC<IGameplayProps> = ({ id }) => {
     <section className={styles.root} id={id}>
       <Wrapper>
         <div className={styles.inner}>
-          <Title className={styles.title} as={'h2'}>
-            Gameplay
-          </Title>
-          <Text className={styles.text}>
-            Gear up your NFT-wizardiator with spells from a pool of 80+ scrolls
-            across 8 magic schools. Mix&apos;em up for synergy, pick your
-            opponent, play with crypto bets, and add some bluffing for fun
-          </Text>
-          <Text className={styles.text}>
-            Then, chill and watch your gladiator wreck your opponent with
-            spells. If yours turns them to ashes first, pocket your
-            opponent&apos;s bet
-          </Text>
+          <ZoomIn>
+            <Title className={styles.title} as={'h2'}>
+              Gameplay
+            </Title>
+          </ZoomIn>
+          <SlideIn>
+            <Text className={styles.text}>
+              Gear up your NFT-wizardiator with spells from a pool of 80+
+              scrolls across 8 magic schools. Mix&apos;em up for synergy, pick
+              your opponent, play with crypto bets, and add some bluffing for
+              fun
+            </Text>
+            <Text className={styles.text}>
+              Then, chill and watch your gladiator wreck your opponent with
+              spells. If yours turns them to ashes first, pocket your
+              opponent&apos;s bet
+            </Text>
+          </SlideIn>
           <div className={styles.sliderContainer}>
             <Swiper
               breakpoints={breakpoints}

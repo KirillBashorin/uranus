@@ -1,13 +1,15 @@
 'use client';
 import React, { FC, useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import clsx from 'clsx';
 
 import Wrapper from '@/components/layout/Wrapper';
+import ZoomIn from '@/components/animations/ZoomIn';
+import SlideIn from '@/components/animations/SlidIn';
 import Title from '@/components/ui/Title';
 
 import styles from './Narrative.module.css';
-import { difference } from 'next/dist/build/utils';
 
 const accordionItems = [
   {
@@ -72,15 +74,33 @@ const Narrative: FC<INarrativeProps> = ({ id }) => {
     <section className={styles.root} id={id}>
       <Wrapper>
         <div className={styles.inner}>
-          <Title className={styles.title} as={'h2'}>
-            Narrative
-          </Title>
-          <p className={styles.subtitle}>
-            Magus Answers Your
-            <br /> Questions about URANUS
-          </p>
+          <ZoomIn>
+            <Title className={styles.title} as={'h2'}>
+              Narrative
+            </Title>
+          </ZoomIn>
+          <SlideIn>
+            <p className={styles.subtitle}>
+              Magus Answers Your
+              <br /> Questions about URANUS
+            </p>
+          </SlideIn>
           <div className={styles.dialog} ref={dialogRef}>
-            <div className={styles.mage} ref={mageRef}>
+            <motion.div
+              className={styles.mage}
+              ref={mageRef}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{
+                duration: 1,
+                ease: 'easeInOut',
+              }}
+              variants={{
+                hidden: { x: '50%' },
+                visible: { x: '0%' },
+              }}
+            >
               <Image
                 className={styles.mageImage}
                 src={'mage.png'}
@@ -88,7 +108,7 @@ const Narrative: FC<INarrativeProps> = ({ id }) => {
                 height="280"
                 alt="Magnus"
               />
-            </div>
+            </motion.div>
             <ul className={styles.accordion} ref={accordion}>
               {accordionItems &&
                 accordionItems.length &&
