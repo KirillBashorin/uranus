@@ -1,34 +1,36 @@
+'use client';
 import React, { FC, useState, useEffect } from 'react';
 import Link from 'next/link';
-import clsx from 'clsx';
 import Image from 'next/image';
+import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
-import Socials, { SocialIcons } from '@/components/ui/Socials';
+// import Socials, { SocialIcons } from '@/components/ui/Socials';
 
 import styles from './Header.module.css';
 
-const socialItems = [
-  {
-    icon: SocialIcons.DISCORD,
-    link: '#1',
-  },
-  {
-    icon: SocialIcons.FACEBOOK,
-    link: '#2',
-  },
-  {
-    icon: SocialIcons.GITHUB,
-    link: '#3',
-  },
-  {
-    icon: SocialIcons.MEDIUM,
-    link: '#4',
-  },
-  {
-    icon: SocialIcons.TWITTER,
-    link: '#5',
-  },
-];
+// const socialItems = [
+//   {
+//     icon: SocialIcons.DISCORD,
+//     link: '#1',
+//   },
+//   {
+//     icon: SocialIcons.FACEBOOK,
+//     link: '#2',
+//   },
+//   {
+//     icon: SocialIcons.GITHUB,
+//     link: '#3',
+//   },
+//   {
+//     icon: SocialIcons.MEDIUM,
+//     link: '#4',
+//   },
+//   {
+//     icon: SocialIcons.TWITTER,
+//     link: '#5',
+//   },
+// ];
 
 const navItems = [
   {
@@ -109,7 +111,20 @@ const Header: FC = () => {
   }, [isMenuOpened]);
 
   return (
-    <header className={rootClassNames}>
+    <motion.header
+      className={rootClassNames}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{
+        duration: 2,
+        ease: 'easeInOut',
+      }}
+      variants={{
+        hidden: { y: '-100%' },
+        visible: { y: '0%' },
+      }}
+    >
       <button
         className={burgerClassNames}
         type="button"
@@ -134,7 +149,7 @@ const Header: FC = () => {
               </li>
             ))}
         </ul>
-        <Socials className={styles.socials} items={socialItems} />
+        {/* <Socials className={styles.socials} items={socialItems} /> */}
       </nav>
       <Image
         className={styles.badge}
@@ -143,7 +158,7 @@ const Header: FC = () => {
         src="/icons/soon.svg"
         alt="Coming soon"
       />
-    </header>
+    </motion.header>
   );
 };
 

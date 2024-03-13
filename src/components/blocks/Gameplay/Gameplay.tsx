@@ -1,8 +1,8 @@
+'use client';
 import React, { FC, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Swiper as SwiperType } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { motion } from 'framer-motion';
 import clsx from 'clsx';
 import 'swiper/css';
 

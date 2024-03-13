@@ -1,4 +1,5 @@
-import React, { FC, useRef } from 'react';
+'use client';
+import React, { FC, useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import clsx from 'clsx';
@@ -11,14 +12,30 @@ import HowItWorks from '@/components/blocks/HowItWorks';
 import styles from './Hero.module.css';
 
 const Hero: FC = () => {
+  const [distanceDivider, seDistanceDivider] = useState(1);
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
   const useParallax = (value: MotionValue, distance: number) => {
-    return useTransform(value, [0, 1], [0, distance]);
+    return useTransform(value, [0, 1], [0, distance / distanceDivider]);
   };
 
   const loadAnimtaionDuration = 2;
+
+  useEffect(() => {
+    const updateDistanceDivider = () => {
+      if (window.innerWidth < 720) {
+        seDistanceDivider(4);
+      } else {
+        seDistanceDivider(1);
+      }
+    };
+
+    updateDistanceDivider();
+    window.addEventListener('resize', updateDistanceDivider);
+
+    return () => window.removeEventListener('resize', updateDistanceDivider);
+  }, []);
 
   return (
     <section className={styles.root} ref={targetRef}>
@@ -210,7 +227,7 @@ const Hero: FC = () => {
             </motion.div>
             <ZoomIn
               className={clsx(styles.motionDiv, styles.uranus)}
-              duration={1}
+              duration={loadAnimtaionDuration}
             >
               <Image
                 className={styles.image}

@@ -42,15 +42,25 @@ const Narrative: FC<INarrativeProps> = ({ id }) => {
   const [activeItemHeight, setActiveItemHeight] = useState('0px');
   const isInView = useInView(accordion);
 
-  useEffect(() => {
+  const mageRef = useRef<HTMLDivElement | null>(null);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
+
+  const updateActiveItemHeight = () => {
     const currentItemHeight = activeItem.current?.offsetHeight;
     if (activeItem.current) {
       setActiveItemHeight(currentItemHeight + 'px');
     }
+  };
+
+  useEffect(() => {
+    updateActiveItemHeight();
   }, [activeItemIndex]);
 
-  const mageRef = useRef<HTMLDivElement | null>(null);
-  const dialogRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    window.addEventListener('resize', updateActiveItemHeight);
+
+    return () => window.removeEventListener('resize', updateActiveItemHeight);
+  }, []);
 
   useEffect(() => {
     // setting timeout because dialog height have a transition duration 300ms;
@@ -58,7 +68,7 @@ const Narrative: FC<INarrativeProps> = ({ id }) => {
       const mage = mageRef.current;
       const dialogHeight = dialogRef.current?.offsetHeight;
       const mageHeight = mage?.offsetHeight;
-      console.log('isInView', isInView);
+
       if (!(mageHeight && dialogHeight && mage && isInView)) {
         return;
       }
