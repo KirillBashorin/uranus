@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import localFont from 'next/font/local';
-import clsx from 'clsx';
 import { Metadata } from 'next';
+import localFont from 'next/font/local';
+import { GoogleTagManager } from '@next/third-parties/google';
+import clsx from 'clsx';
 
 import './styles/globals.css';
 
@@ -53,6 +54,7 @@ const RootLayout: FC<IRootLayoutProps> = ({ children }) => {
   const fontVariables = clsx([coreSansC.variable, junegull.variable]);
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="G-1PTY36DPN9" />
       <body className={fontVariables}>{children}</body>
     </html>
   );
